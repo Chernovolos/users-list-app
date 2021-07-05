@@ -1,6 +1,6 @@
 import { all } from 'redux-saga/effects';
-import countWatcher from './countSaga';
+import watchPeople from './peopleSaga';
 
 export function* rootWatcher() {
-    yield all([countWatcher()])
+    yield all([watchPeople()])
 }

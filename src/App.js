@@ -1,17 +1,16 @@
-import {Badge, Button, Container} from '@material-ui/core';
+import { Button, Container } from '@material-ui/core';
 import { useSelector, useDispatch } from "react-redux";
-import {asyncDecrementCreator, asyncIncrementCreator} from "./actions/counterAction";
+import { getPeopleStart } from "./actions/peopleAction";
 
 const App = () => {
-    const count = useSelector(state => state.countReducer.count);
+    const people = useSelector(state => state.peopleReducer.people);
     const dispatch = useDispatch();
+    console.log(people);
 
     return (
     <div className="App">
         <Container maxWidth="sm">
-            <Badge color="secondary">{count}</Badge>
-            <Button onClick={() => dispatch(asyncIncrementCreator())} variant="contained" color="primary">increment</Button>
-            <Button onClick={() => dispatch(asyncDecrementCreator())} variant="contained" color="secondary">decrement</Button>
+            <Button onClick={() => dispatch(getPeopleStart())} variant="contained" color="secondary">people</Button>
         </Container>
     </div>
     );
