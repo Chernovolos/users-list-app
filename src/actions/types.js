@@ -1,6 +1,9 @@
+export const PEOPLE_URL = 'https://swapi.dev/api/people/';
 
-//COUNTER
-export const INCREMENT = 'INCREMENT';
-export const ASYNC_INCREMENT = 'ASYNC_INCREMENT';
-export const DECREMENT = 'DECREMENT';
-export const ASYNC_DECREMENT = 'ASYNC_DECREMENT';
+//PEOPLE
+export const GET_PEOPLE_START = "GET_PEOPLE_START";
+export const GET_PEOPLE_SUCCESS ="GET_PEOPLE_SUCCESS";
+export const GET_PEOPLE_ERROR = "GET_PEOPLE_ERROR";
+
+
+
